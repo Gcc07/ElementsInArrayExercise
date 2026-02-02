@@ -22,9 +22,14 @@ public class Exercise19_05 {
      * @return the maximum element
      */
     public static <E extends Comparable<E>> E max(E[] list) {
-        // TODO: Implement this method
-        System.out.println("TODO: max() not implemented yet");
-        return null;
+        E currentLargestValue = list[0];
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].compareTo(currentLargestValue) == 1) {
+                currentLargestValue = list[i];
+            }
+        }
+
+        return currentLargestValue;
     }
 
     public static void main(String[] args) {
